@@ -1,11 +1,11 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Code2, Database, Zap, GitBranch } from "lucide-react"
+import { Smartphone, Layers, Server, Cloud, ShieldCheck, Wrench, Terminal } from "lucide-react"
 
 export function Skills() {
   const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -15,108 +15,99 @@ export function Skills() {
           observer.unobserve(entry.target)
         }
       },
-      { threshold: 0.3 },
+      { threshold: 0.1 }
     )
 
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
 
-  const skillCategories = [
-  {
-    title: "Languages",
-    icon: Code2,
-    skills: ["Dart", "C", "JavaScript"],
-    color: "cyan",
-  },
-  {
-    title: "Frameworks",
-    icon: Zap,
-    skills: ["Flutter", "Express.js", "SwiftUI"],
-    color: "purple",
-  },
-  {
-    title: "State Management",
-    icon: Database,
-    skills: ["BLoC", "Provider", "GetX", "Riverpod"],
-    color: "cyan",
-  },
-  {
-    title: "Databases & Storage",
-    icon: Database,
-    skills: ["Firebase", "MongoDB", "Hive", "Sqflite"],
-    color: "purple",
-  },
-  {
-    title: "Tools & Version Control",
-    icon: GitBranch,
-    skills: ["Git", "GitHub", "Android Studio", "VS Code", "Xcode", "Postman"],
-    color: "cyan",
-  },
-  {
-    title: "Backend & APIs",
-    icon: Zap,
-    skills: [
-      "REST APIs",
-      "Node.js",
-      "Express.js",
-      "Cloudinary",
-      "Razorpay",
-      "Google Maps API"
-    ],
-    color: "purple",
-  },
-  {
-    title: "Learning & Exploring",
-    icon: Zap,
-    skills: ["Swift", "Kotlin", "Full-stack workflows"],
-    color: "cyan",
-  },
-]
-
+  const skillGroups = [
+    {
+      title: "Mobile & Flutter Web",
+      icon: Smartphone,
+      skills: ["Flutter", "Dart", "Flutter Web", "Android", "iOS", "Responsive & Adaptive UI", "Custom Widgets"],
+    },
+    {
+      title: "State & Architecture",
+      icon: Layers,
+      skills: ["Riverpod", "BLoC", "Provider", "GetX", "Clean Architecture", "MVVM Pattern", "Dependency Injection"],
+    },
+    {
+      title: "Backend & Microservices",
+      icon: Server,
+      skills: ["Node.js", "Express.js", "MongoDB", "REST APIs", "gRPC", "Next.js", "Dio Interceptors", "JWT & RBAC"],
+    },
+    {
+      title: "Cloud, Storage & DevOps",
+      icon: Cloud,
+      skills: ["Firebase (Auth, Firestore, FCM)", "AWS S3", "Hive (Local DB)", "GitHub Actions CI/CD", "Google Play Deployment"],
+    },
+    {
+      title: "Payments & Mobile Security",
+      icon: ShieldCheck,
+      skills: ["Stripe Payments", "Tap Payments", "Razorpay", "iOS Keychain", "Android KeyStore", "TLS In Transit", "flutter_secure_storage"],
+    },
+    {
+      title: "Testing & Tooling",
+      icon: Wrench,
+      skills: ["Unit Testing & Mocking", "Git & GitHub", "Postman", "Figma to Code", "Xcode", "Android Studio"],
+    },
+  ]
 
   return (
     <section id="skills" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Skills & <span className="gradient-text">Expertise</span>
-          </h2>
-          <p className="text-gray-400 text-lg">Technologies and tools I work with</p>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-white/5 gap-4">
+          <div>
+            <div className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-wider mb-2">
+              <Terminal size={13} /> Technical Arsenal
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
+              Skills & <span className="gradient-text-mint">Technologies</span>
+            </h2>
+          </div>
+          <p className="text-slate-400 text-xs sm:text-sm max-w-md">
+            Production-tested stack covering mobile clients, backend APIs, cloud, and security.
+          </p>
         </div>
 
+        {/* Skills Bento Matrix */}
         <div
           ref={ref}
-          className={`grid md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-1000 ${
-            isVisible ? "opacity-100" : "opacity-0"
+          className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-4 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {skillCategories.map((category, index) => {
-            const Icon = category.icon
-            const isBlue = category.color === "cyan"
+          {skillGroups.map((group, idx) => {
+            const Icon = group.icon
             return (
               <div
-                key={index}
-                className={`card-dark-hover p-6 cursor-pointer transition-all duration-300 hover:scale-105`}
-                style={{ transitionDelay: `${index * 50}ms` }}
+                key={idx}
+                className="bento-card-hover p-5 flex flex-col justify-between"
+                style={{ transitionDelay: `${idx * 80}ms` }}
               >
-                <div className={`flex items-center gap-3 mb-4 ${isBlue ? "text-cyan-400" : "text-purple-400"}`}>
-                  <Icon size={28} />
-                  <h3 className="text-xl font-bold">{category.title}</h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, idx) => (
-                    <span
-                      key={idx}
-                      className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ${
-                        isBlue
-                          ? "bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/40"
-                          : "bg-purple-500/20 text-purple-300 hover:bg-purple-500/40"
-                      }`}
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                <div>
+                  <div className="flex items-center gap-2.5 mb-4">
+                    <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                      <Icon size={16} />
+                    </div>
+                    <h3 className="text-sm font-bold text-white tracking-tight">
+                      {group.title}
+                    </h3>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1.5">
+                    {group.skills.map((skill, sIdx) => (
+                      <span
+                        key={sIdx}
+                        className="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 text-slate-200 border border-white/5 hover:border-emerald-500/30 hover:text-emerald-300 transition-colors"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             )

@@ -1,117 +1,166 @@
-"use client";
+"use client"
 
-import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import { Award, ExternalLink } from "lucide-react";
+import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
+import { Award, ExternalLink, GraduationCap, Trophy } from "lucide-react"
 
 export function Certifications() {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
+          setIsVisible(true)
+          observer.unobserve(entry.target)
         }
       },
-      { threshold: 0.3 }
-    );
+      { threshold: 0.1 }
+    )
 
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
 
-  const certifications = [
+  const credentials = [
     {
-      id: 1,
+      id: "google-play",
       title: "Google Play Store Listing Certificate",
       issuer: "Google Play Academy",
-      date: "October 28, 2025",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/google_play_cerficate-OTsZQORvYaCLOLdQU7UEZ3rJnhhA3T.png",
+      date: "October 2025",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/google_play_cerficate-OTsZQORvYaCLOLdQU7UEZ3rJnhhA3T.png",
       link: "https://www.credential.net/9af1bfe0-3865-4468-bee5-2554813637be",
-      icon: Award,
+      badge: "Google Certified",
     },
     {
-      id: 2,
-      title: "Best Coordinator of the Month",
-      issuer: "Brototype",
-      date: "2024",
+      id: "brototype-award",
+      title: "Mobile App Development & Best Coordinator Award",
+      issuer: "Brototype, Calicut",
+      date: "2024 – 2025",
       image: "/coordinator.png",
-      icon: Award,
+      link: "#",
+      badge: "Leadership Award",
     },
-  ];
+  ]
+
+  const education = [
+    {
+      degree: "Bachelor of Computer Applications (BCA)",
+      institution: "Manipal University Jaipur (Online)",
+      period: "Mar 2026 – 2029 (Expected)",
+      status: "In Progress",
+    },
+    {
+      degree: "Mobile App Development using Flutter",
+      institution: "Brototype, Calicut",
+      period: "2024 – 2025",
+      status: "Completed",
+    },
+  ]
 
   return (
-    <section className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Certifications & <span className="gradient-text">Achievements</span>
-          </h2>
-          <p className="text-gray-400 text-lg">
-            Recognition and milestones
+    <section id="certifications" className="py-20 relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-white/5 gap-4">
+          <div>
+            <div className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-wider mb-2">
+              <Award size={13} /> Qualifications
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
+              Certifications & <span className="gradient-text-mint">Education</span>
+            </h2>
+          </div>
+          <p className="text-slate-400 text-xs sm:text-sm max-w-md">
+            Verified credentials, leadership achievements, and academics.
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div
-          ref={ref}
-          className={`grid md:grid-cols-2 gap-8 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          {certifications.map((cert, index) => (
-            <div
-              key={cert.id}
-              className="card-dark-hover overflow-hidden group cursor-pointer rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20"
-              style={{ transitionDelay: `${index * 150}ms` }}
-            >
-              {/* Certificate Image */}
-              <div className="relative w-full aspect-[5/3] overflow-hidden bg-slate-900">
-                <Image
-                  src={cert.image}
-                  alt={cert.title}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
+        <div ref={ref} className="grid md:grid-cols-12 gap-5 items-start">
+          {/* Left Column: Certifications (7 cols) */}
+          <div className="md:col-span-7 space-y-4">
+            <h3 className="text-sm font-mono text-slate-400 uppercase tracking-wider flex items-center gap-1.5 mb-3">
+              <Award size={14} className="text-emerald-400" />
+              <span>Verified Certifications</span>
+            </h3>
 
-              {/* Certificate Content */}
-              <div className="p-4">
-                <div className="flex items-start gap-3 mb-2">
-                  <Award
-                    className="text-cyan-400 flex-shrink-0 mt-1"
-                    size={22}
-                  />
-                  <h3 className="text-lg font-semibold text-white leading-snug">
-                    {cert.title}
-                  </h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {credentials.map((item, idx) => (
+                <div
+                  key={item.id}
+                  className={`bento-card-hover p-4 flex flex-col justify-between transition-all duration-700 ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
+                  style={{ transitionDelay: `${idx * 100}ms` }}
+                >
+                  <div>
+                    <div className="relative aspect-[16/10] w-full rounded-lg overflow-hidden bg-slate-900 mb-3 border border-white/5">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover"
+                      />
+                      <span className="absolute top-2 right-2 px-2 py-0.5 rounded text-[9px] font-mono bg-black/60 text-emerald-300 border border-emerald-500/30 backdrop-blur-md">
+                        {item.badge}
+                      </span>
+                    </div>
+
+                    <h4 className="text-xs sm:text-sm font-bold text-white leading-snug mb-1">
+                      {item.title}
+                    </h4>
+                    <p className="text-[11px] text-emerald-400 font-mono">{item.issuer}</p>
+                    <p className="text-[10px] text-slate-400">{item.date}</p>
+                  </div>
+
+                  {item.link && item.link !== "#" && (
+                    <div className="pt-3 mt-2 border-t border-white/5">
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400 hover:underline"
+                      >
+                        <span>Verify Credential</span>
+                        <ExternalLink size={11} />
+                      </a>
+                    </div>
+                  )}
                 </div>
-                <p className="text-purple-400 font-medium text-sm mb-1">
-                  {cert.issuer}
-                </p>
-                <p className="text-gray-400 text-xs mb-3">{cert.date}</p>
-
-                {cert.link && (
-                  <a
-                    href={cert.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-cyan-400 hover:text-cyan-300 text-sm font-semibold transition-colors duration-300"
-                  >
-                    View Certificate <ExternalLink size={14} />
-                  </a>
-                )}
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Right Column: Education (5 cols) */}
+          <div className="md:col-span-5 space-y-4">
+            <h3 className="text-sm font-mono text-slate-400 uppercase tracking-wider flex items-center gap-1.5 mb-3">
+              <GraduationCap size={14} className="text-emerald-400" />
+              <span>Academic Education</span>
+            </h3>
+
+            <div className="bento-card p-5 space-y-4">
+              {education.map((edu, idx) => (
+                <div
+                  key={idx}
+                  className="pb-4 last:pb-0 border-b last:border-b-0 border-white/5"
+                >
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <h4 className="text-xs sm:text-sm font-bold text-white">
+                      {edu.degree}
+                    </h4>
+                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-white/5 text-slate-300">
+                      {edu.status}
+                    </span>
+                  </div>
+                  <p className="text-xs text-emerald-400 font-medium">{edu.institution}</p>
+                  <p className="text-[11px] text-slate-400 font-mono mt-0.5">{edu.period}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  );
+  )
 }

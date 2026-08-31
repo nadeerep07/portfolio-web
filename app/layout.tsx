@@ -1,36 +1,45 @@
 import type React from "react"
-import type { Metadata } from "next"
-import { Poppins } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Inter, Plus_Jakarta_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-// ✅ Font setup
-const poppins = Poppins({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
 })
 
-// ✅ Full metadata setup
-export const metadata: Metadata = {
-  title: "Nadeer E P - Flutter Developer",
-  description:
-    "Building beautiful, fast, and scalable apps with Flutter. Portfolio showcasing projects, skills, and achievements.",
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-heading",
+})
 
+export const viewport: Viewport = {
+  themeColor: "#070a13",
+  width: "device-width",
+  initialScale: 1,
+}
+
+export const metadata: Metadata = {
+  title: "Nadeer E P | Flutter & Full-Stack Developer",
+  description:
+    "Flutter engineer building high-performance mobile and web applications end-to-end. Experienced with Riverpod, BLoC, Next.js, Node.js, and Cloud Architectures.",
   keywords: [
     "Nadeer E P",
     "Flutter Developer",
-    "Mobile App Developer",
-    "Frontend Developer",
+    "Flutter Web",
+    "Mobile Engineer",
     "Dart",
-    "Firebase",
-    "React Native",
-    "Portfolio",
-    "UI Design",
-    "Full Stack Developer",
+    "Riverpod",
+    "BLoC",
+    "Next.js",
+    "Node.js",
+    "Dubai Flutter Developer",
+    "Remote Flutter Developer",
+    "dirham_symbol",
+    "Dr Plus",
   ],
-
-  authors: [{ name: "Nadeer E P", url: "https://nadeerep-portfolio.vercel.app" }], // replace with your actual domain
-
+  authors: [{ name: "Nadeer E P", url: "https://nadeerep.dev" }],
   icons: {
     icon: [
       { url: "/nadeer-icon.png", sizes: "32x32", type: "image/png" },
@@ -39,42 +48,20 @@ export const metadata: Metadata = {
     apple: "/nadeer-icon.png",
     shortcut: "/nadeer-icon.png",
   },
-
   openGraph: {
-    title: "Nadeer E P - Flutter Developer",
+    title: "Nadeer E P — Flutter & Full-Stack Developer",
     description:
-      "Building beautiful, fast, and scalable apps with Flutter. Portfolio showcasing projects, skills, and achievements.",
-    url: "https://nadeerep-portfolio.vercel.app", 
-    siteName: "Nadeer E P",
-    images: [
-      {
-        url: "https://nadeerep-portfolio.vercel.app/nadeer-icon.png", 
-        width: 1200,
-        height: 630,
-        alt: "Nadeer E P - Flutter Developer",
-      },
-    ],
+      "Production-grade mobile and web applications. Creator of Dr Plus, Tathkarah Web & Console rebuilds, and dirham_symbol on pub.dev (160/160 pts).",
+    siteName: "Nadeer E P Portfolio",
     locale: "en_US",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "Nadeer E P - Flutter Developer",
+    title: "Nadeer E P — Flutter & Full-Stack Developer",
     description:
-      "Building beautiful, fast, and scalable apps with Flutter. Portfolio showcasing projects, skills, and achievements.",
-    creator: "@nadeer", // optional: your X/Twitter handle
-    images: ["https://nadeerep-portfolio.vercel.app/nadeer-icon.png"],
+      "Production-grade mobile and web applications. Sole engineer behind Dr Plus, Tathkarah Web, and dirham_symbol on pub.dev.",
   },
-
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
-
-  themeColor: "#0f0f1e",
 }
 
 export default function RootLayout({
@@ -83,12 +70,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      style={{ fontFamily: poppins.style.fontFamily }}
-      className="scroll-smooth"
-    >
-      <body className="antialiased bg-slate-950 text-white">
+    <html lang="en" className={`scroll-smooth dark ${inter.variable} ${jakarta.variable}`}>
+      <body className="antialiased bg-[#070a13] text-slate-100 selection:bg-cyan-500/20 selection:text-cyan-300 font-sans">
         {children}
         <Analytics />
       </body>
