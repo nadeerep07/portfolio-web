@@ -133,6 +133,9 @@ const jsonLd = {
         "https://github.com/nadeerep07",
         "https://www.linkedin.com/in/nadeerep/",
         "https://pub.dev/packages/dirham_symbol",
+        "https://play.google.com/store/apps/details?id=com.quickpitch",
+        "https://play.google.com/store/apps/details?id=com.zoyo.bathware",
+        "https://interview-mind-pro.vercel.app/",
       ],
       worksFor: {
         "@type": "Organization",
@@ -187,6 +190,50 @@ const jsonLd = {
       mainEntity: {
         "@id": `${siteUrl}/#person`,
       },
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "QuickPitch",
+      operatingSystem: "Android, iOS",
+      applicationCategory: "BusinessApplication",
+      url: "https://play.google.com/store/apps/details?id=com.quickpitch",
+      author: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description: "Two-sided marketplace connecting service seekers with providers through real-time bidding.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "InvoZoyo",
+      operatingSystem: "Android",
+      applicationCategory: "BusinessApplication",
+      url: "https://play.google.com/store/apps/details?id=com.zoyo.bathware",
+      author: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description: "Offline retail billing and inventory management POS application built on local Hive database.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "InterviewMind Pro",
+      operatingSystem: "Web",
+      applicationCategory: "EducationalApplication",
+      url: "https://interview-mind-pro.vercel.app/",
+      author: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description: "AI-powered interview preparation coach with real-time feedback and analysis.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "dirham_symbol",
+      operatingSystem: "Cross-platform",
+      applicationCategory: "DeveloperApplication",
+      url: "https://pub.dev/packages/dirham_symbol",
+      author: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description: "Open-source Flutter package for standardized UAE Dirham (AED) currency presentation (160/160 pub points).",
     },
   ],
 }
