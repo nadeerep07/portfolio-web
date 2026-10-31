@@ -182,6 +182,26 @@ const projects = [
     tags: ["Flutter", "Node.js", "MongoDB"],
   },
   {
+    title: "QuickPitch",
+    type: "Service Marketplace",
+    description:
+      "Two-sided Flutter marketplace with BLoC, Firebase Auth, Google Maps provider discovery, and server-verified Razorpay payments.",
+    image: "/images/quick-pitch.png",
+    href: "https://play.google.com/store/apps/details?id=com.quickpitch",
+    badge: "Play Store",
+    tags: ["Flutter", "BLoC", "Razorpay"],
+  },
+  {
+    title: "InvoZoyo",
+    type: "Offline Billing & Inventory",
+    description:
+      "Offline-first Flutter POS with Hive DB, PDF invoice generation, cart discounts, and real-time low-stock alerts.",
+    image: "/images/invo-zoyo.png",
+    href: "https://play.google.com/store/apps/details?id=com.zoyo.bathware",
+    badge: "Play Store",
+    tags: ["Flutter", "Hive DB", "PDF"],
+  },
+  {
     title: "Finovision",
     type: "Fintech Platform",
     description:
@@ -210,26 +230,6 @@ const projects = [
     href: "https://interview-mind-pro.vercel.app/",
     badge: "Live Web",
     tags: ["Next.js", "Express.js", "MongoDB", "AI Analysis"],
-  },
-  {
-    title: "QuickPitch",
-    type: "Service Marketplace",
-    description:
-      "Two-sided Flutter marketplace with BLoC, Firebase Auth, Google Maps provider discovery, and server-verified Razorpay payments.",
-    image: "/images/quick-pitch.png",
-    href: "https://play.google.com/store/apps/details?id=com.quickpitch",
-    badge: "Play Store",
-    tags: ["Flutter", "BLoC", "Razorpay"],
-  },
-  {
-    title: "InvoZoyo",
-    type: "Offline Billing & Inventory",
-    description:
-      "Offline-first Flutter POS with Hive DB, PDF invoice generation, cart discounts, and real-time low-stock alerts.",
-    image: "/images/invo-zoyo.png",
-    href: "https://play.google.com/store/apps/details?id=com.zoyo.bathware",
-    badge: "Play Store",
-    tags: ["Flutter", "Hive DB", "PDF"],
   },
   {
     title: "dirham_symbol",
