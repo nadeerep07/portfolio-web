@@ -162,13 +162,12 @@ export function Navbar() {
                 </svg>
               </a>
 
-              <Link
-                href="#contact"
-                onClick={(e) => handleScrollTo(e, "#contact")}
+              <a
+                href="mailto:nadeerep.dev@gmail.com"
                 className="hidden sm:inline-flex items-center gap-1.5 px-4.5 py-2 rounded-full text-xs font-semibold bg-[#0f172a] text-white dark:bg-white dark:text-[#0f172a] hover:bg-black dark:hover:bg-slate-100 shadow-xs transition-all hover:scale-102 shrink-0"
               >
                 Let&apos;s Talk <ArrowUpRightIcon size={12} />
-              </Link>
+              </a>
 
               {/* Mobile Hamburger Menu Toggle */}
               <button
@@ -204,13 +203,13 @@ export function Navbar() {
                   </Link>
                 ))}
                 <div className="pt-2 border-t border-slate-200/60 dark:border-white/10 flex items-center justify-between">
-                  <Link
-                    onClick={(e) => handleScrollTo(e, "#contact")}
-                    href="#contact"
+                  <a
+                    onClick={() => setMobileMenuOpen(false)}
+                    href="mailto:nadeerep.dev@gmail.com"
                     className="w-full text-center py-2.5 rounded-full text-xs font-semibold bg-[#0f172a] text-white dark:bg-white dark:text-[#0f172a]"
                   >
                     Let&apos;s Talk ↗
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             )}
@@ -280,13 +279,12 @@ export function Navbar() {
                   </svg>
                 </a>
 
-                <Link
-                  href="#contact"
-                  onClick={(e) => handleScrollTo(e, "#contact")}
+                <a
+                  href="mailto:nadeerep.dev@gmail.com"
                   className="hidden sm:inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#0f172a] text-white dark:bg-white dark:text-[#0f172a] hover:bg-black dark:hover:bg-slate-100 shadow-xs transition-all hover:scale-102 shrink-0"
                 >
                   Let&apos;s Talk <ArrowUpRightIcon size={11} />
-                </Link>
+                </a>
 
                 {/* Mobile Hamburger Menu Toggle */}
                 <button
@@ -323,13 +321,13 @@ export function Navbar() {
                   </Link>
                 ))}
                 <div className="pt-2 border-t border-slate-200/60 dark:border-white/10 flex items-center justify-between">
-                  <Link
-                    onClick={(e) => handleScrollTo(e, "#contact")}
-                    href="#contact"
+                  <a
+                    onClick={() => setMobileMenuOpen(false)}
+                    href="mailto:nadeerep.dev@gmail.com"
                     className="w-full text-center py-2.5 rounded-full text-xs font-semibold bg-[#0f172a] text-white dark:bg-white dark:text-[#0f172a]"
                   >
                     Let&apos;s Talk ↗
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             )}
