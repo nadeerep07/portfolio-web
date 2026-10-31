@@ -202,16 +202,6 @@ const projects = [
     tags: ["Next.js", "Tailwind", "Vercel"],
   },
   {
-    title: "dirham_symbol",
-    type: "Open-Source Package",
-    description:
-      "Published UAE dirham formatting package with unit tests and example app, achieving a perfect 160/160 pub points.",
-    image: "/images/dirham-package.png",
-    href: "https://pub.dev/packages/dirham_symbol",
-    badge: "160/160 Pub Points",
-    tags: ["Dart", "Flutter", "pub.dev"],
-  },
-  {
     title: "InterviewMind Pro",
     type: "AI Interview Coach",
     description:
@@ -240,6 +230,16 @@ const projects = [
     href: "https://play.google.com/store/apps/details?id=com.zoyo.bathware",
     badge: "Play Store",
     tags: ["Flutter", "Hive DB", "PDF"],
+  },
+  {
+    title: "dirham_symbol",
+    type: "Open-Source Package",
+    description:
+      "Published UAE dirham formatting package with unit tests and example app, achieving a perfect 160/160 pub points.",
+    image: "/images/dirham-package.png",
+    href: "https://pub.dev/packages/dirham_symbol",
+    badge: "160/160 Pub Points",
+    tags: ["Dart", "Flutter", "pub.dev"],
   },
 ];
 
