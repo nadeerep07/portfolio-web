@@ -1,24 +1,28 @@
-import type { MetadataRoute } from "next"
+import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://nadeerep-portfolio.vercel.app"
+  const baseUrl = "https://nadeerep-portfolio.vercel.app";
 
   return {
     rules: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/"],
       },
       {
-        userAgent: "Googlebot",
-        allow: "/",
-      },
-      {
-        userAgent: "Bingbot",
+        userAgent: [
+          "Googlebot",
+          "Bingbot",
+          "Applebot",
+          "GPTBot",
+          "ClaudeBot",
+          "PerplexityBot",
+          "Google-Extended",
+        ],
         allow: "/",
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
-  }
+  };
 }
+

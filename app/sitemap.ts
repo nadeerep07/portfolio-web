@@ -1,8 +1,8 @@
-import type { MetadataRoute } from "next"
+import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://nadeerep-portfolio.vercel.app"
-  const lastModified = new Date()
+  const baseUrl = "https://nadeerep-portfolio.vercel.app";
+  const lastModified = new Date();
 
   return [
     {
@@ -15,31 +15,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}#about`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}#experience`,
-      lastModified,
-      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}#projects`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}#skills`,
+      url: `${baseUrl}#services`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}#certifications`,
+      url: `${baseUrl}#work`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}#process`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}#education`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.85,
     },
     {
       url: `${baseUrl}#contact`,
@@ -47,5 +47,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-  ]
+  ];
 }
+

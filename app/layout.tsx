@@ -1,57 +1,47 @@
-import type React from "react"
-import type { Metadata, Viewport } from "next"
-import { Inter, Plus_Jakarta_Sans } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import "./globals.css"
+import type { Metadata, Viewport } from "next";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-})
-
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-heading",
-})
+const siteUrl = "https://nadeerep-portfolio.vercel.app";
 
 export const viewport: Viewport = {
-  themeColor: "#08090c",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0f19" },
+  ],
   width: "device-width",
   initialScale: 1,
-}
-
-const siteUrl = "https://nadeerep-portfolio.vercel.app"
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Nadeer E P | Flutter Developer — Mobile & Flutter Web Engineer",
+    default: "Nadeer E P | Flutter & Full-Stack Developer",
     template: "%s | Nadeer E P",
   },
   description:
-    "Official portfolio of Nadeer E P — Flutter Developer & Full-Stack Engineer building production mobile & web applications. Sole engineer behind Dr Plus (Dubai Healthcare), author of dirham_symbol on pub.dev (160/160 pts), and Flutter Developer at Tathkarah.",
+    "Official portfolio of Nadeer E P — Founding Engineer, Flutter & Full-Stack Developer. Sole engineer behind Dr Plus (Dubai healthcare platform live on app stores) and author of dirham_symbol on pub.dev (160/160 pub points).",
   keywords: [
     "Nadeer E P",
     "Nadeer EP",
     "Nadeer Flutter",
     "Nadeer Developer",
     "Flutter Developer",
-    "Flutter Developer Kerala",
     "Flutter Developer Dubai",
+    "Flutter Developer UAE",
+    "Flutter Developer Kerala",
     "Flutter Developer India",
+    "Full-Stack Developer",
+    "Founding Engineer",
     "Remote Flutter Developer",
     "Mobile App Developer",
     "Flutter Web Developer",
-    "Dart Developer",
-    "Riverpod Developer",
-    "BLoC Flutter",
-    "dirham_symbol",
-    "dirham_symbol pub dev",
-    "Dr Plus Flutter",
-    "Tathkarah Flutter",
     "Next.js Developer",
-    "Node.js Flutter Backend",
+    "Node.js Developer",
+    "PostgreSQL Developer",
     "Clean Architecture Flutter",
+    "dirham_symbol",
+    "Dr Plus Home Healthcare",
   ],
   authors: [{ name: "Nadeer E P", url: siteUrl }],
   creator: "Nadeer E P",
@@ -75,24 +65,25 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/nadeer-icon.png", sizes: "32x32", type: "image/png" },
-      { url: "/nadeer-icon.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
     ],
-    apple: "/nadeer-icon.png",
-    shortcut: "/nadeer-icon.png",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   openGraph: {
-    title: "Nadeer E P | Flutter Developer — Mobile & Flutter Web",
+    title: "Nadeer E P | Flutter & Full-Stack Developer",
     description:
-      "Production-grade mobile and web applications. Sole engineer behind Dr Plus (Dubai), Flutter Developer at Tathkarah, and author of dirham_symbol on pub.dev (160/160 pts).",
+      "Production-grade mobile and full-stack applications. Sole engineer behind Dr Plus (Dubai Healthcare) and author of dirham_symbol on pub.dev (160/160 pts).",
     url: siteUrl,
     siteName: "Nadeer E P Portfolio",
     images: [
       {
-        url: "/nadeer-icon.png",
-        width: 1200,
-        height: 630,
-        alt: "Nadeer E P - Flutter & Mobile Developer",
+        url: "/icon.png",
+        width: 1024,
+        height: 1024,
+        alt: "Nadeer E P - Flutter & Full-Stack Developer",
       },
     ],
     locale: "en_US",
@@ -100,14 +91,19 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nadeer E P | Flutter Developer — Mobile & Flutter Web",
+    title: "Nadeer E P | Flutter & Full-Stack Developer",
     description:
-      "Production mobile & web engineer. Sole engineer behind Dr Plus, author of dirham_symbol on pub.dev (160/160 pts), and Flutter Developer at Tathkarah.",
-    images: ["/nadeer-icon.png"],
+      "Founding Engineer & Full-Stack Flutter Developer. Sole engineer behind Dr Plus and creator of dirham_symbol on pub.dev.",
+    images: ["/icon.png"],
   },
-}
+  other: {
+    "geo.region": "IN-KL;AE-DU",
+    "geo.placename": "Kozhikode, Kerala, India; Dubai, UAE",
+    "geo.position": "11.2588;75.7804",
+    "ICBM": "11.2588, 75.7804",
+  },
+};
 
-// JSON-LD Structured Data Schema for Google Rich Search & Knowledge Graph
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -116,11 +112,11 @@ const jsonLd = {
       "@id": `${siteUrl}/#person`,
       name: "Nadeer E P",
       alternateName: ["Nadeer EP", "Nadeer", "nadeerep07"],
-      jobTitle: "Flutter Developer & Mobile Engineer",
+      jobTitle: "Founding Engineer | Flutter & Full-Stack Developer",
       description:
-        "Flutter engineer building production mobile and web applications end-to-end. Sole engineer of Dr Plus (Dubai home-healthcare) and author of dirham_symbol on pub.dev (160/160 pts).",
+        "Flutter and full-stack developer with over a year of experience building production mobile and web applications using Flutter, Node.js, Next.js, and PostgreSQL. Sole engineer behind Dr Plus production healthcare platform in Dubai and author of dirham_symbol on pub.dev (160/160 pub points).",
       url: siteUrl,
-      image: `${siteUrl}/images/design-mode/nadeer_casual.png`,
+      image: `${siteUrl}/images/nadeer_front_portrait.jpg`,
       email: "mailto:nadeerep.dev@gmail.com",
       telephone: "+919207874848",
       address: {
@@ -133,14 +129,23 @@ const jsonLd = {
         "https://github.com/nadeerep07",
         "https://www.linkedin.com/in/nadeerep/",
         "https://pub.dev/packages/dirham_symbol",
-        "https://play.google.com/store/apps/details?id=com.quickpitch",
-        "https://play.google.com/store/apps/details?id=com.zoyo.bathware",
+        "https://play.google.com/store/apps/details?id=com.drplus.staff",
         "https://interview-mind-pro.vercel.app/",
+        "https://finovision-preview.vercel.app/",
+        "https://duotek.ae/",
       ],
-      worksFor: {
-        "@type": "Organization",
-        name: "Tathkarah Travel & Tourism Pvt. Ltd.",
-      },
+      worksFor: [
+        {
+          "@type": "Organization",
+          name: "Dr Plus Star Home Healthcare",
+          location: "Dubai, UAE",
+        },
+        {
+          "@type": "Organization",
+          name: "Tathkarah Travel & Tourism Pvt. Ltd.",
+          location: "Kuwait / Remote",
+        },
+      ],
       alumniOf: [
         {
           "@type": "EducationalOrganization",
@@ -151,25 +156,57 @@ const jsonLd = {
           name: "Brototype",
         },
       ],
+      hasCredential: [
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Google Play Store Listing Certificate",
+          credentialCategory: "Certificate",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "Google Play Academy",
+          },
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Introduction to DevOps",
+          credentialCategory: "Certificate",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "IBM / Coursera",
+          },
+          url: "https://coursera.org/verify/J754RUM09U89",
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "AI Tools & Claude Workshop",
+          credentialCategory: "Certificate",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "be10x",
+          },
+        },
+      ],
       knowsAbout: [
         "Flutter",
         "Dart",
-        "Riverpod",
-        "BLoC",
-        "Flutter Web",
-        "Android App Development",
-        "iOS App Development",
-        "Clean Architecture",
-        "MVVM",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
         "Next.js",
-        "gRPC",
-        "Stripe Payments",
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "MongoDB",
+        "Supabase",
         "Firebase",
         "AWS S3",
+        "Riverpod",
+        "BLoC",
+        "Provider",
+        "Clean Architecture",
+        "MVVM",
+        "REST APIs",
+        "Fastify",
         "CI/CD with GitHub Actions",
+        "Google Play Console",
+        "App Store Connect",
       ],
     },
     {
@@ -186,43 +223,22 @@ const jsonLd = {
       "@type": "ProfilePage",
       "@id": `${siteUrl}/#profilepage`,
       url: siteUrl,
-      name: "Nadeer E P — Flutter Developer Portfolio",
+      name: "Nadeer E P — Flutter & Full-Stack Developer Portfolio",
       mainEntity: {
         "@id": `${siteUrl}/#person`,
       },
     },
     {
       "@type": "SoftwareApplication",
-      name: "QuickPitch",
+      name: "Dr Plus Team",
       operatingSystem: "Android, iOS",
-      applicationCategory: "BusinessApplication",
-      url: "https://play.google.com/store/apps/details?id=com.quickpitch",
+      applicationCategory: "HealthApplication",
+      url: "https://play.google.com/store/apps/details?id=com.drplus.staff",
       author: {
         "@id": `${siteUrl}/#person`,
       },
-      description: "Two-sided marketplace connecting service seekers with providers through real-time bidding.",
-    },
-    {
-      "@type": "SoftwareApplication",
-      name: "InvoZoyo",
-      operatingSystem: "Android",
-      applicationCategory: "BusinessApplication",
-      url: "https://play.google.com/store/apps/details?id=com.zoyo.bathware",
-      author: {
-        "@id": `${siteUrl}/#person`,
-      },
-      description: "Offline retail billing and inventory management POS application built on local Hive database.",
-    },
-    {
-      "@type": "SoftwareApplication",
-      name: "InterviewMind Pro",
-      operatingSystem: "Web",
-      applicationCategory: "EducationalApplication",
-      url: "https://interview-mind-pro.vercel.app/",
-      author: {
-        "@id": `${siteUrl}/#person`,
-      },
-      description: "AI-powered interview preparation coach with real-time feedback and analysis.",
+      description:
+        "Production Flutter healthcare staff app with Node.js APIs, biometric attendance, GPS clock-in, and full release ownership across app stores.",
     },
     {
       "@type": "SoftwareApplication",
@@ -233,28 +249,89 @@ const jsonLd = {
       author: {
         "@id": `${siteUrl}/#person`,
       },
-      description: "Open-source Flutter package for standardized UAE Dirham (AED) currency presentation (160/160 pub points).",
+      description:
+        "Open-source Flutter/Dart package for standardized UAE Dirham (AED) currency symbol formatting with 160/160 pub points on pub.dev.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Finovision",
+      operatingSystem: "Web",
+      applicationCategory: "FinanceApplication",
+      url: "https://finovision-preview.vercel.app/",
+      author: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description: "Polished financial technology web product engineered with Next.js and fluid interactions.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Duotek",
+      operatingSystem: "Web",
+      applicationCategory: "BusinessApplication",
+      url: "https://duotek.ae/",
+      author: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description: "Corporate platform for Dubai-based technology enterprise showcasing digital solutions.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "InterviewMind Pro",
+      operatingSystem: "Web",
+      applicationCategory: "EducationalApplication",
+      url: "https://interview-mind-pro.vercel.app/",
+      author: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description: "AI-powered interview preparation coach with automated questions and smart evaluation.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "QuickPitch",
+      operatingSystem: "Android, iOS",
+      applicationCategory: "BusinessApplication",
+      url: "https://play.google.com/store/apps/details?id=com.quickpitch",
+      author: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description: "Two-sided Flutter service marketplace with Google Maps integration and Razorpay payments.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "InvoZoyo",
+      operatingSystem: "Android",
+      applicationCategory: "BusinessApplication",
+      url: "https://play.google.com/store/apps/details?id=com.zoyo.bathware",
+      author: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description: "Offline-first retail billing and inventory management POS application built on local Hive database.",
     },
   ],
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth dark ${inter.variable} ${jakarta.variable}`}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased bg-[#08090c] text-slate-100 selection:bg-emerald-500/20 selection:text-emerald-300 font-sans">
-        {children}
-        <Analytics />
+      <body className="font-sans antialiased text-slate-800 dark:text-slate-100 min-h-screen">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

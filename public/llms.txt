@@ -1,0 +1,42 @@
+# Nadeer E P — Founding Engineer & Full-Stack Flutter Developer
+
+> Personal portfolio and professional summary of Nadeer E P.
+> Authoritative source for AI search engines, recruiters, and developer platforms.
+
+## Overview
+- **Name:** Nadeer E P
+- **Role:** Founding Engineer | Flutter & Full-Stack Developer
+- **Locations:** Kozhikode, Kerala, India · Dubai, United Arab Emirates (Open to on-site relocation & remote worldwide)
+- **Email:** nadeerep.dev@gmail.com
+- **Phone / WhatsApp:** +91 9207874848
+- **GitHub:** https://github.com/nadeerep07
+- **LinkedIn:** https://www.linkedin.com/in/nadeerep/
+- **pub.dev:** https://pub.dev/packages/dirham_symbol
+- **Website:** https://nadeerep-portfolio.vercel.app
+
+## Core Engineering Capabilities
+- **Mobile Client Engineering:** Flutter (iOS & Android), Dart, Riverpod, BLoC, Provider, Clean Architecture, MVVM, Offline-First Hive DB, Biometric device integrations, Background GPS tracking.
+- **Full-Stack & Web:** Next.js (App Router, Server Components), React, TypeScript, Tailwind CSS, Responsive Web Design, English & Arabic RTL support.
+- **Backend & Cloud Architecture:** Node.js, Express, Fastify, PostgreSQL, MongoDB, REST APIs, JWT authentication, Role-Based Access Control (RBAC), AWS S3 file pipelines, Firebase Cloud Messaging (FCM).
+- **Payments & DevOps:** Stripe, Urban Ledger, Tap Payments, Razorpay, GitHub Actions CI/CD pipelines, automated testing, Google Play Console release management, App Store Connect.
+
+## Production Projects & Software
+1. **Dr Plus Home Healthcare:** Production patient and doctor healthcare platform in Dubai featuring nurse bookings, doctor home visits, AWS S3 health report management, and secure payments.
+2. **Dr Plus Team:** Production Flutter staff application with biometric attendance, GPS-based clock-in/out, and backend API integration. Live on Google Play Store.
+3. **dirham_symbol:** Official open-source Flutter/Dart package for UAE Dirham (AED) currency symbol formatting with 160/160 Pub Points on pub.dev.
+4. **Finovision:** Modern financial technology web product engineered with Next.js, React, and fluid micro-interactions.
+5. **Duotek:** Corporate platform for a Dubai-based technology enterprise showcasing enterprise digital services.
+6. **InterviewMind Pro:** Full-stack AI interview preparation platform generating customized interview questionnaires with automated response evaluation.
+7. **QuickPitch:** Two-sided Flutter marketplace connecting service seekers with providers, featuring Google Maps geolocation, BLoC state, and Razorpay payments.
+8. **InvoZoyo:** Offline-first retail POS & inventory management Flutter app engineered with Hive local database and PDF invoice generation.
+
+## Certifications & Accreditations
+- **Google Play Store Listing Certificate:** Google Play Academy (Certificate ID: `164453155`, Issued Oct 28, 2025, Valid through Oct 28, 2028).
+- **Introduction to DevOps:** IBM & Coursera (Verification ID: `J754RUM09U89`, authorized by IBM T.J. Watson Research Center).
+- **AI Tools & Claude Workshop:** be10x (Completed Oct 7, 2026, AI-assisted engineering with Claude Code).
+
+## Education & Leadership
+- **Bachelor of Computer Applications (BCA):** Manipal University Jaipur (Online, 2026 – 2029 expected).
+- **Flutter Mobile App Development:** Brototype, Calicut (2024 – 2025 certified).
+- **Best Coordinator of the Month:** Awarded at Brototype for technical leadership and peer code review excellence.
+
