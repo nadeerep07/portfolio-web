@@ -130,8 +130,9 @@ const jsonLd = {
         "https://www.linkedin.com/in/nadeerep/",
         "https://pub.dev/packages/dirham_symbol",
         "https://play.google.com/store/apps/details?id=com.drplus.staff",
+        "https://apps.apple.com/in/app/dr-plus-team/id6827041110",
         "https://interview-mind-pro.vercel.app/",
-        "https://finovision-preview.vercel.app/",
+        "https://www.finovision.net/",
         "https://duotek.ae/",
       ],
       worksFor: [
@@ -233,7 +234,11 @@ const jsonLd = {
       name: "Dr Plus Team",
       operatingSystem: "Android, iOS",
       applicationCategory: "HealthApplication",
-      url: "https://play.google.com/store/apps/details?id=com.drplus.staff",
+      url: "https://apps.apple.com/in/app/dr-plus-team/id6827041110",
+      sameAs: [
+        "https://play.google.com/store/apps/details?id=com.drplus.staff",
+        "https://apps.apple.com/in/app/dr-plus-team/id6827041110",
+      ],
       author: {
         "@id": `${siteUrl}/#person`,
       },
@@ -257,7 +262,7 @@ const jsonLd = {
       name: "Finovision",
       operatingSystem: "Web",
       applicationCategory: "FinanceApplication",
-      url: "https://finovision-preview.vercel.app/",
+      url: "https://www.finovision.net/",
       author: {
         "@id": `${siteUrl}/#person`,
       },

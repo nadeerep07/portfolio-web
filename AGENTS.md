@@ -99,9 +99,9 @@ Displayed in rounded frosted glass squircle cards with authentic brand colors an
    * **Tech:** Flutter, Node.js, MongoDB, AWS S3, Firebase Cloud Messaging, Payment Gateways.
 2. **Dr Plus Team (Staff / Healthcare App)**
    * **Play Store:** `https://play.google.com/store/apps/details?id=com.drplus.staff`
-   * **App Store:** In review (keep Apple App Store icon / button with placeholder / "In Review" status until user adds link on deployment).
+   * **App Store:** `https://apps.apple.com/in/app/dr-plus-team/id6827041110`
 3. **Finovision**
-   * **Live Link:** `https://finovision-preview.vercel.app/`
+   * **Live Link:** `https://www.finovision.net/`
    * Web showcase / fintech platform.
 4. **Duotek**
    * **Live Link:** `https://duotek.ae/`

@@ -177,8 +177,10 @@ const projects = [
     description:
       "Production Flutter staff app with Node.js APIs, biometric attendance, GPS clock-in, and release ownership across both app stores.",
     image: "/images/dr-plus-team-preview.png",
-    href: "https://play.google.com/store/apps/details?id=com.drplus.staff",
-    badge: "Play Store",
+    href: "https://apps.apple.com/in/app/dr-plus-team/id6827041110",
+    playStoreHref: "https://play.google.com/store/apps/details?id=com.drplus.staff",
+    appStoreHref: "https://apps.apple.com/in/app/dr-plus-team/id6827041110",
+    badge: "App Store & Play Store",
     tags: ["Flutter", "Node.js", "MongoDB"],
   },
   {
@@ -207,7 +209,7 @@ const projects = [
     description:
       "A polished financial web product showcasing fintech solutions with clean responsive layout and fluid interactions.",
     image: "/images/finovision-preview.png",
-    href: "https://finovision-preview.vercel.app/",
+    href: "https://www.finovision.net/",
     badge: "Live Web",
     tags: ["Next.js", "React", "TypeScript"],
   },
@@ -417,13 +419,39 @@ export function PortfolioSections() {
                         {project.type}
                       </p>
                     </div>
-                    <Link
-                      href={project.href}
-                      target={project.href.startsWith("http") ? "_blank" : undefined}
-                      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white dark:bg-slate-800 text-[#0f172a] dark:text-white shadow-xs transition-transform hover:scale-110 border border-white/80 dark:border-white/10"
-                    >
-                      <ArrowUpRightIcon size={14} />
-                    </Link>
+                    {project.playStoreHref && project.appStoreHref ? (
+                      <div className="flex items-center gap-1.5 shrink-0">
+                        <a
+                          href={project.playStoreHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="View on Google Play"
+                          aria-label="View on Google Play"
+                          className="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-slate-800 text-[#0f172a] dark:text-white shadow-xs transition-transform hover:scale-110 border border-white/80 dark:border-white/10 p-1.5"
+                        >
+                          <GooglePlayIcon className="w-4 h-4" />
+                        </a>
+                        <a
+                          href={project.appStoreHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="View on Apple App Store"
+                          aria-label="View on Apple App Store"
+                          className="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-slate-800 text-[#0f172a] dark:text-white shadow-xs transition-transform hover:scale-110 border border-white/80 dark:border-white/10 p-1.5"
+                        >
+                          <AppStoreIcon className="w-4 h-4" />
+                        </a>
+                      </div>
+                    ) : (
+                      <Link
+                        href={project.href}
+                        target={project.href.startsWith("http") ? "_blank" : undefined}
+                        rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white dark:bg-slate-800 text-[#0f172a] dark:text-white shadow-xs transition-transform hover:scale-110 border border-white/80 dark:border-white/10"
+                      >
+                        <ArrowUpRightIcon size={14} />
+                      </Link>
+                    )}
                   </div>
                   <p className="mt-3 text-xs leading-relaxed text-[#64748b] dark:text-[#94a3b8]">
                     {project.description}
