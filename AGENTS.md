@@ -95,7 +95,8 @@ Displayed in rounded frosted glass squircle cards with authentic brand colors an
 
 ### Priority 1: Latest Works
 1. **Dr Plus Home Healthcare (Consumer / Patient Healthcare App)**
-   * **Play Store:** `https://play.google.com/store/apps/details?id=com.drplus.staff`
+   * **Play Store:** `https://play.google.com/store/apps/details?id=com.drplus.homecare.user`
+   * **App Store:** `https://apps.apple.com/in/app/dr-plus-home-healthcare/id6757393421`
    * **Tech:** Flutter, Node.js, MongoDB, AWS S3, Firebase Cloud Messaging, Payment Gateways.
 2. **Dr Plus Team (Staff / Healthcare App)**
    * **Play Store:** `https://play.google.com/store/apps/details?id=com.drplus.staff`

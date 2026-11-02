@@ -129,6 +129,8 @@ const jsonLd = {
         "https://github.com/nadeerep07",
         "https://www.linkedin.com/in/nadeerep/",
         "https://pub.dev/packages/dirham_symbol",
+        "https://play.google.com/store/apps/details?id=com.drplus.homecare.user",
+        "https://apps.apple.com/in/app/dr-plus-home-healthcare/id6757393421",
         "https://play.google.com/store/apps/details?id=com.drplus.staff",
         "https://apps.apple.com/in/app/dr-plus-team/id6827041110",
         "https://interview-mind-pro.vercel.app/",
@@ -228,6 +230,22 @@ const jsonLd = {
       mainEntity: {
         "@id": `${siteUrl}/#person`,
       },
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Dr Plus Home Healthcare",
+      operatingSystem: "Android, iOS",
+      applicationCategory: "HealthApplication",
+      url: "https://apps.apple.com/in/app/dr-plus-home-healthcare/id6757393421",
+      sameAs: [
+        "https://play.google.com/store/apps/details?id=com.drplus.homecare.user",
+        "https://apps.apple.com/in/app/dr-plus-home-healthcare/id6757393421",
+      ],
+      author: {
+        "@id": `${siteUrl}/#person`,
+      },
+      description:
+        "Production consumer healthcare application in Dubai for doctor home visits, nurse appointments, AWS S3 lab report delivery, and secure payments across iOS and Android.",
     },
     {
       "@type": "SoftwareApplication",

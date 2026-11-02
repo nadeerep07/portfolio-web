@@ -21,7 +21,7 @@
 - **Payments & DevOps:** Stripe, Urban Ledger, Tap Payments, Razorpay, GitHub Actions CI/CD pipelines, automated testing, Google Play Console release management, App Store Connect.
 
 ## Production Projects & Software
-1. **Dr Plus Home Healthcare:** Production patient and doctor healthcare platform in Dubai featuring nurse bookings, doctor home visits, AWS S3 health report management, and secure payments.
+1. **Dr Plus Home Healthcare:** Production patient and doctor healthcare platform in Dubai featuring nurse bookings, doctor home visits, AWS S3 health report management, and secure payments. Live on Apple App Store (https://apps.apple.com/in/app/dr-plus-home-healthcare/id6757393421) & Google Play Store (https://play.google.com/store/apps/details?id=com.drplus.homecare.user).
 2. **Dr Plus Team:** Production Flutter staff application with biometric attendance, GPS-based clock-in/out, and backend API integration. Live on Apple App Store (https://apps.apple.com/in/app/dr-plus-team/id6827041110) & Google Play Store.
 3. **dirham_symbol:** Official open-source Flutter/Dart package for UAE Dirham (AED) currency symbol formatting with 160/160 Pub Points on pub.dev.
 4. **Finovision:** Modern financial technology web product (https://www.finovision.net/) engineered with Next.js, React, and fluid micro-interactions.

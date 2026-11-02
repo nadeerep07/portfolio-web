@@ -167,8 +167,10 @@ const projects = [
     description:
       "Patient-facing healthcare app in Dubai for doctor home visits, nurse bookings, lab test reports via AWS S3, and payment gateways.",
     image: "/images/dr-plus-home-healthcare.png",
-    href: "https://play.google.com/store/apps/details?id=com.drplus.staff",
-    badge: "Play Store",
+    href: "https://apps.apple.com/in/app/dr-plus-home-healthcare/id6757393421",
+    playStoreHref: "https://play.google.com/store/apps/details?id=com.drplus.homecare.user",
+    appStoreHref: "https://apps.apple.com/in/app/dr-plus-home-healthcare/id6757393421",
+    badge: "App Store & Play Store",
     tags: ["Flutter", "Node.js", "AWS S3", "MongoDB"],
   },
   {
@@ -190,6 +192,7 @@ const projects = [
       "Two-sided Flutter marketplace with BLoC, Firebase Auth, Google Maps provider discovery, and server-verified Razorpay payments.",
     image: "/images/quick-pitch.png",
     href: "https://play.google.com/store/apps/details?id=com.quickpitch",
+    playStoreHref: "https://play.google.com/store/apps/details?id=com.quickpitch",
     badge: "Play Store",
     tags: ["Flutter", "BLoC", "Razorpay"],
   },
@@ -200,6 +203,7 @@ const projects = [
       "Offline-first Flutter POS with Hive DB, PDF invoice generation, cart discounts, and real-time low-stock alerts.",
     image: "/images/invo-zoyo.png",
     href: "https://play.google.com/store/apps/details?id=com.zoyo.bathware",
+    playStoreHref: "https://play.google.com/store/apps/details?id=com.zoyo.bathware",
     badge: "Play Store",
     tags: ["Flutter", "Hive DB", "PDF"],
   },
@@ -425,8 +429,8 @@ export function PortfolioSections() {
                           href={project.playStoreHref}
                           target="_blank"
                           rel="noopener noreferrer"
-                          title="View on Google Play"
-                          aria-label="View on Google Play"
+                          title={`View ${project.title} on Google Play`}
+                          aria-label={`View ${project.title} on Google Play`}
                           className="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-slate-800 text-[#0f172a] dark:text-white shadow-xs transition-transform hover:scale-110 border border-white/80 dark:border-white/10 p-1.5"
                         >
                           <GooglePlayIcon className="w-4 h-4" />
@@ -435,18 +439,31 @@ export function PortfolioSections() {
                           href={project.appStoreHref}
                           target="_blank"
                           rel="noopener noreferrer"
-                          title="View on Apple App Store"
-                          aria-label="View on Apple App Store"
+                          title={`View ${project.title} on Apple App Store`}
+                          aria-label={`View ${project.title} on Apple App Store`}
                           className="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-slate-800 text-[#0f172a] dark:text-white shadow-xs transition-transform hover:scale-110 border border-white/80 dark:border-white/10 p-1.5"
                         >
                           <AppStoreIcon className="w-4 h-4" />
                         </a>
                       </div>
+                    ) : project.playStoreHref ? (
+                      <a
+                        href={project.playStoreHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={`View ${project.title} on Google Play`}
+                        aria-label={`View ${project.title} on Google Play`}
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white dark:bg-slate-800 text-[#0f172a] dark:text-white shadow-xs transition-transform hover:scale-110 border border-white/80 dark:border-white/10 p-1.5"
+                      >
+                        <GooglePlayIcon className="w-4 h-4" />
+                      </a>
                     ) : (
                       <Link
                         href={project.href}
                         target={project.href.startsWith("http") ? "_blank" : undefined}
                         rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                        title={`View ${project.title}`}
+                        aria-label={`View ${project.title}`}
                         className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white dark:bg-slate-800 text-[#0f172a] dark:text-white shadow-xs transition-transform hover:scale-110 border border-white/80 dark:border-white/10"
                       >
                         <ArrowUpRightIcon size={14} />
