@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Nadeer E P",
   },
   description:
-    "Official portfolio of Nadeer E P — Founding Engineer, Flutter & Full-Stack Developer based in Kerala, India and Dubai, UAE. Sole engineer behind Dr Plus (production healthcare apps on iOS & Android) and author of dirham_symbol on pub.dev (160/160 pub points).",
+    "Nadeer E P | Founding Engineer, Flutter & Full-Stack Developer in Kerala & Dubai. Built Dr Plus on iOS/Android and dirham_symbol on pub.dev (160/160 pts).",
   keywords: [
     "Nadeer E P",
     "Nadeer EP",
