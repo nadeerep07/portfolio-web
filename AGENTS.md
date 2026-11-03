@@ -170,13 +170,16 @@ All stored in `./images/`:
 ---
 
 ## 9. SEO & GEO Implementation
+* **Primary Canonical Domain:** `https://www.nadeerep.in/`
 * **Dynamic Sitemap & Robots:**
-  * `app/sitemap.ts` generates `/sitemap.xml` with priority weighting for `#work`, `#about`, `#education`, `#services`, `#process`, and `#contact`.
-  * `app/robots.ts` generates `/robots.txt` granting access to web crawlers and AI bots (GPTBot, ClaudeBot, PerplexityBot, Google-Extended).
+  * `app/sitemap.ts` generates `/sitemap.xml` under `https://www.nadeerep.in` with priority weighting for `#work`, `#about`, `#education`, `#services`, `#process`, and `#contact`.
+  * `app/robots.ts` generates `/robots.txt` granting access to search crawlers and AI bots (GPTBot, ClaudeBot, PerplexityBot, Google-Extended).
 * **AI Optimization (`public/llms.txt`):**
   * Markdown knowledge manifest for AI search models documenting biography, roles, contact channels, live apps, pub.dev package, and credentials.
 * **Knowledge Graph Schema (JSON-LD):**
-  * Injected via `app/layout.tsx` with full `@graph` containing `Person`, `WebSite`, `ProfilePage`, and `SoftwareApplication` entries.
+  * Injected via `app/layout.tsx` with full `@graph` containing `Person` (with postal address, geo coordinates, work locations, contact point), `WebSite`, `ProfilePage`, `BreadcrumbList`, and `SoftwareApplication` entries.
 * **Geographic Targeting:**
-  * Meta tags for regional recruiter discovery: `geo.region` (`IN-KL;AE-DU`), `geo.placename` (`Kozhikode, Kerala, India; Dubai, UAE`), `geo.position` (`11.2588;75.7804`), `ICBM` (`11.2588, 75.7804`).
+  * Meta tags for regional recruiter discovery: `geo.region` (`IN-KL, AE-DU`), `geo.placename` (`Kozhikode, Kerala, India; Dubai, United Arab Emirates`), `geo.position` (`11.2588;75.7804`), `ICBM` (`11.2588, 75.7804`), `target-country` (`IN, AE, US, GB, CA`), `coverage` (`Worldwide`).
+* **Web App Manifest (`app/manifest.ts`):**
+  * Native web app manifest for installability, PWA readiness, and mobile search discoverability.
 

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const siteUrl = "https://nadeerep-portfolio.vercel.app";
+const siteUrl = "https://www.nadeerep.in";
 
 export const viewport: Viewport = {
   themeColor: [
@@ -20,34 +20,44 @@ export const metadata: Metadata = {
     template: "%s | Nadeer E P",
   },
   description:
-    "Official portfolio of Nadeer E P — Founding Engineer, Flutter & Full-Stack Developer. Sole engineer behind Dr Plus (Dubai healthcare platform live on app stores) and author of dirham_symbol on pub.dev (160/160 pub points).",
+    "Official portfolio of Nadeer E P — Founding Engineer, Flutter & Full-Stack Developer based in Kerala, India and Dubai, UAE. Sole engineer behind Dr Plus (production healthcare apps on iOS & Android) and author of dirham_symbol on pub.dev (160/160 pub points).",
   keywords: [
     "Nadeer E P",
     "Nadeer EP",
     "Nadeer Flutter",
     "Nadeer Developer",
+    "nadeerep.in",
+    "www.nadeerep.in",
     "Flutter Developer",
     "Flutter Developer Dubai",
     "Flutter Developer UAE",
     "Flutter Developer Kerala",
+    "Flutter Developer Kozhikode",
     "Flutter Developer India",
     "Full-Stack Developer",
     "Founding Engineer",
     "Remote Flutter Developer",
-    "Mobile App Developer",
+    "Mobile App Developer Dubai",
     "Flutter Web Developer",
-    "Next.js Developer",
+    "Next.js Developer India",
     "Node.js Developer",
     "PostgreSQL Developer",
     "Clean Architecture Flutter",
     "dirham_symbol",
     "Dr Plus Home Healthcare",
+    "Dr Plus Team",
   ],
   authors: [{ name: "Nadeer E P", url: siteUrl }],
   creator: "Nadeer E P",
   publisher: "Nadeer E P",
   alternates: {
-    canonical: "/",
+    canonical: siteUrl,
+    languages: {
+      "en-US": siteUrl,
+      "en-IN": siteUrl,
+      "en-AE": siteUrl,
+      "x-default": siteUrl,
+    },
   },
   verification: {
     google: "BUpT6ky_RDU5c3PEXpDc3eTXmAF8nAK2IXda8VAhciI",
@@ -75,7 +85,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Nadeer E P | Flutter & Full-Stack Developer",
     description:
-      "Production-grade mobile and full-stack applications. Sole engineer behind Dr Plus (Dubai Healthcare) and author of dirham_symbol on pub.dev (160/160 pts).",
+      "Production-grade mobile and full-stack applications. Sole engineer behind Dr Plus (Dubai Healthcare on iOS & Android) and author of dirham_symbol on pub.dev (160/160 pts).",
     url: siteUrl,
     siteName: "Nadeer E P Portfolio",
     images: [
@@ -97,10 +107,16 @@ export const metadata: Metadata = {
     images: ["/icon.png"],
   },
   other: {
-    "geo.region": "IN-KL;AE-DU",
-    "geo.placename": "Kozhikode, Kerala, India; Dubai, UAE",
+    "geo.region": "IN-KL, AE-DU",
+    "geo.placename": "Kozhikode, Kerala, India; Dubai, United Arab Emirates",
     "geo.position": "11.2588;75.7804",
     "ICBM": "11.2588, 75.7804",
+    "target-country": "IN, AE, US, GB, CA",
+    "coverage": "Worldwide",
+    "distribution": "Global",
+    "rating": "General",
+    "revisit-after": "7 days",
+    "author": "Nadeer E P",
   },
 };
 
@@ -111,7 +127,7 @@ const jsonLd = {
       "@type": "Person",
       "@id": `${siteUrl}/#person`,
       name: "Nadeer E P",
-      alternateName: ["Nadeer EP", "Nadeer", "nadeerep07"],
+      alternateName: ["Nadeer EP", "Nadeer", "nadeerep07", "Nadeer E P Developer"],
       jobTitle: "Founding Engineer | Flutter & Full-Stack Developer",
       description:
         "Flutter and full-stack developer with over a year of experience building production mobile and web applications using Flutter, Node.js, Next.js, and PostgreSQL. Sole engineer behind Dr Plus production healthcare platform in Dubai and author of dirham_symbol on pub.dev (160/160 pub points).",
@@ -119,13 +135,52 @@ const jsonLd = {
       image: `${siteUrl}/images/nadeer_front_portrait.jpg`,
       email: "mailto:nadeerep.dev@gmail.com",
       telephone: "+919207874848",
+      nationality: "Indian",
+      knowsLanguage: ["en", "ml", "hi"],
       address: {
         "@type": "PostalAddress",
         addressLocality: "Kozhikode",
         addressRegion: "Kerala",
-        addressCountry: "India",
+        postalCode: "673001",
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 11.2588,
+        longitude: 75.7804,
+      },
+      workLocation: [
+        {
+          "@type": "Place",
+          name: "Kozhikode, Kerala, India",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Kozhikode",
+            addressRegion: "Kerala",
+            addressCountry: "IN",
+          },
+        },
+        {
+          "@type": "Place",
+          name: "Dubai, United Arab Emirates",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Dubai",
+            addressCountry: "AE",
+          },
+        },
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "Recruitment & Development Inquiries",
+        email: "nadeerep.dev@gmail.com",
+        telephone: "+919207874848",
+        availableLanguage: ["English", "Malayalam", "Hindi"],
+        areaServed: ["India", "United Arab Emirates", "Worldwide"],
       },
       sameAs: [
+        "https://www.nadeerep.in",
+        "https://nadeerep.in",
         "https://github.com/nadeerep07",
         "https://www.linkedin.com/in/nadeerep/",
         "https://pub.dev/packages/dirham_symbol",
@@ -216,11 +271,12 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
       url: siteUrl,
-      name: "Nadeer E P — Portfolio",
-      description: "Official developer portfolio of Nadeer E P.",
+      name: "Nadeer E P | Flutter & Full-Stack Developer",
+      description: "Official portfolio and engineering showcase of Nadeer E P — Founding Engineer, Flutter & Full-Stack Developer.",
       publisher: {
         "@id": `${siteUrl}/#person`,
       },
+      inLanguage: "en",
     },
     {
       "@type": "ProfilePage",
@@ -230,6 +286,47 @@ const jsonLd = {
       mainEntity: {
         "@id": `${siteUrl}/#person`,
       },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "About",
+          item: `${siteUrl}#about`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Services",
+          item: `${siteUrl}#services`,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: "Work",
+          item: `${siteUrl}#work`,
+        },
+        {
+          "@type": "ListItem",
+          position: 5,
+          name: "Process",
+          item: `${siteUrl}#process`,
+        },
+        {
+          "@type": "ListItem",
+          position: 6,
+          name: "Contact",
+          item: `${siteUrl}#contact`,
+        },
+      ],
     },
     {
       "@type": "SoftwareApplication",

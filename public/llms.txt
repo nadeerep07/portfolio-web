@@ -12,7 +12,7 @@
 - **GitHub:** https://github.com/nadeerep07
 - **LinkedIn:** https://www.linkedin.com/in/nadeerep/
 - **pub.dev:** https://pub.dev/packages/dirham_symbol
-- **Website:** https://nadeerep-portfolio.vercel.app
+- **Website:** https://www.nadeerep.in (canonical domain)
 
 ## Core Engineering Capabilities
 - **Mobile Client Engineering:** Flutter (iOS & Android), Dart, Riverpod, BLoC, Provider, Clean Architecture, MVVM, Offline-First Hive DB, Biometric device integrations, Background GPS tracking.
