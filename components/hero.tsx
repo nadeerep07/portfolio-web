@@ -29,10 +29,16 @@ export function Hero() {
       <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         {/* Left Column: Typography & CTAs (6 cols) */}
         <div className="lg:col-span-6 flex flex-col items-start z-10 pl-2 sm:pl-4">
-          {/* Greeting label (Simple purple text matching reference) */}
-          <span className="text-[#6366f1] dark:text-[#a5b4fc] text-xs font-bold tracking-widest uppercase mb-3">
-            HELLO, I&apos;M
-          </span>
+          {/* Greeting label & Location Chip */}
+          <div className="flex flex-wrap items-center gap-2.5 mb-3">
+            <span className="text-[#6366f1] dark:text-[#a5b4fc] text-xs font-bold tracking-widest uppercase">
+              HELLO, I&apos;M
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20 backdrop-blur-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
+              Kozhikode, Kerala · UAE
+            </span>
+          </div>
 
           {/* Name (Deep rich black typography matching reference) */}
           <h1 className="text-5xl sm:text-6xl lg:text-[66px] font-extrabold tracking-tight text-[#0f172a] dark:text-white leading-[1.05] mb-2.5">
@@ -41,13 +47,12 @@ export function Hero() {
 
           {/* Subtitle (Periwinkle/Indigo gradient matching reference) */}
           <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold bg-gradient-to-r from-[#6366f1] via-[#818cf8] to-[#93c5fd] bg-clip-text text-transparent leading-tight mb-5">
-            Flutter &amp; Full-Stack Engineer
+            Flutter &amp; Full-Stack Developer
           </h2>
 
           {/* Description */}
           <p className="text-[15px] sm:text-base text-[#475569] dark:text-[#94a3b8] leading-relaxed max-w-md mb-8 font-normal">
-            Sole engineer behind a production healthcare platform live on both app stores.
-            I craft intuitive mobile apps, robust APIs, and high-performance full-stack web applications.
+            Flutter developer based in Kozhikode, Kerala, and sole engineer behind Dr Plus (production healthcare platform live on Google Play &amp; App Store). Building high-performance mobile apps, robust APIs, and modern full-stack web applications.
           </p>
 
           {/* Primary Action Buttons (Solid black pill + white frosted pill) */}

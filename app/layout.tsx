@@ -135,7 +135,13 @@ const jsonLd = {
       "@id": `${siteUrl}/#person`,
       name: "Nadeer E P",
       alternateName: ["Nadeer EP", "Nadeer", "nadeerep07", "Nadeer E P Developer"],
-      jobTitle: "Founding Engineer | Flutter & Full-Stack Developer",
+      jobTitle: "Flutter Developer | Founding Engineer & Full-Stack Developer",
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "Flutter Developer",
+        occupationalCategory: "15-1252.00",
+        skills: "Flutter, Dart, Mobile App Development, iOS, Android, Node.js, Next.js, PostgreSQL",
+      },
       description:
         "Flutter and full-stack developer with over a year of experience building production mobile and web applications using Flutter, Node.js, Next.js, and PostgreSQL. Sole engineer behind Dr Plus production healthcare platform in Dubai and author of dirham_symbol on pub.dev (160/160 pub points).",
       url: siteUrl,
@@ -278,8 +284,8 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
       url: siteUrl,
-      name: "Nadeer E P | Flutter & Full-Stack Developer",
-      description: "Official portfolio and engineering showcase of Nadeer E P — Founding Engineer, Flutter & Full-Stack Developer.",
+      name: "Nadeer E P | Flutter Developer in Kerala & Dubai",
+      description: "Official portfolio and engineering showcase of Nadeer E P — Founding Engineer & Flutter Developer based in Kozhikode, Kerala and Dubai, UAE.",
       publisher: {
         "@id": `${siteUrl}/#person`,
       },
