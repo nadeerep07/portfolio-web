@@ -182,7 +182,7 @@ export function Hero() {
             <div className="relative z-10 w-full h-full flex items-end justify-center pointer-events-none pb-8">
               <Image
                 src="/images/nadeer_light_cutout_clean.png"
-                alt="Nadeer E P"
+                alt="Nadeer E P — Founding Engineer & Flutter Developer in Kerala & Dubai"
                 width={520}
                 height={580}
                 priority

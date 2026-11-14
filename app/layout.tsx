@@ -101,10 +101,16 @@ export const metadata: Metadata = {
     siteName: "Nadeer E P Portfolio",
     images: [
       {
+        url: "/images/nadeer_front_portrait.jpg",
+        width: 1200,
+        height: 1200,
+        alt: "Nadeer E P — Flutter & Full-Stack Developer in Kerala & Dubai",
+      },
+      {
         url: "/icon.png",
         width: 1024,
         height: 1024,
-        alt: "Nadeer E P - Flutter & Full-Stack Developer",
+        alt: "Nadeer E P Official Logo",
       },
     ],
     locale: "en_US",

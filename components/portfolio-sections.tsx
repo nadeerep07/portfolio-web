@@ -412,7 +412,7 @@ export function PortfolioSections() {
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800/80 rounded-t-[1.75rem]">
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} — Built by Nadeer E P, Flutter & Full-Stack Developer`}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-104"
                   />
@@ -636,7 +636,7 @@ export function PortfolioSections() {
                   <div className="relative aspect-[16/11] overflow-hidden bg-slate-100 dark:bg-slate-800/80 rounded-t-[1.75rem]">
                     <Image
                       src={cert.image}
-                      alt={cert.title}
+                      alt={`${cert.title} Certification — Nadeer E P`}
                       fill
                       className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                     />
@@ -718,7 +718,7 @@ export function PortfolioSections() {
             <div className="liquid-glass-card p-5 flex items-center gap-5 h-full">
               <Image
                 src="/images/achievement-badge.png"
-                alt="Best Coordinator Award"
+                alt="Nadeer E P — Best Coordinator of the Month Award at Brototype"
                 width={80}
                 height={80}
                 className="rounded-2xl object-contain drop-shadow-md shrink-0"
