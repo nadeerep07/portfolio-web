@@ -1,9 +1,10 @@
 # Portfolio Project Specification & Guidelines (AGENTS.md)
 
 ## 1. Project Overview & Rules
-* **Project:** Personal Portfolio for **Nadeer E P**
-* **Role:** Founding Engineer, Flutter & Full-Stack Developer
+* **Project:** Personal Portfolio & Business Profile for **Nadeer E P**
+* **Role:** Founding Engineer, Flutter & Full-Stack Developer / Independent Technology Consultant
 * **Crucial Rule:** **DO NOT BUILD** until user explicitly says **start**. All requirements and notes must be continuously collected and updated here.
+* **Transition Goal (Pending 'start'):** Transform from a job-seeking hiring portfolio ("Download CV", resume focus) into a high-converting **Business & Engineering Consultancy Profile** (Client-facing solutions, MVP delivery, UAE & India tech partnerships, client case studies, discovery calls).
 * **Theme Requirement:** 
   * **System Theme by Default** with an active theme switcher (System / Light / Dark).
   * Both Light mode (frosted glass, pearlescent glow, crisp shadows) and Dark mode (deep slate/obsidian glass with cyan/violet edge glows) must look clean, accessible, modern, and high-contrast.
@@ -183,4 +184,30 @@ All stored in `./images/`:
 * **Web App Manifest & Google Favicon Compliance:**
   * Native web app manifest for installability, PWA readiness, and mobile search discoverability.
   * Google Favicon Search compliance: Multi-size icons in exact multiples of 48px (`icon-48.png`, `icon-96.png`, `icon-192.png`) and multi-layer `favicon.ico` (16px, 32px, 48px), crawled via `Googlebot-Image` and `Google Favicon`.
+
+---
+
+## 10. Business Profile Transformation (Requirements & Spec)
+* **Objective:** Transition from an employee/candidate job-seeker portfolio into a high-converting **Independent Engineering Consultant & Technical Partner Profile** (personal brand, first-person "I", NOT a company or agency).
+* **Identity & Voice:**
+  * **Personal Brand:** Under **Nadeer E P** (first-person "I" / "I build", authentic, approachable, elite solo engineer).
+  * **Core Positioning:** Independent Flutter & Full-Stack Engineer partnering with startups, founders, and businesses to build and launch production-grade mobile and web applications.
+* **Key Strategic Shifts:**
+  1. **Hero & Primary CTAs:**
+     * Replace employee-oriented "Download CV" as the primary button with client-oriented CTAs: **"Discuss Your Project"** / **"Book a Consultation"** (direct WhatsApp / Call / Email).
+     * Provide a subtle secondary link for full-time recruiters who still want the traditional CV ("Looking for my resume? [Download CV]").
+  2. **Client-Centric Value Propositions (What I Do For You):**
+     * **Turnkey Mobile App Delivery:** Taking mobile products from idea/Figma to Google Play & Apple App Store in 30–60 days.
+     * **Production Full-Stack Web & SaaS:** Next.js, Node.js, and PostgreSQL systems that scale smoothly.
+     * **Payment & API Architecture:** Direct integration of UAE (Urban Ledger, Tap) & India (Razorpay) payment gateways, AWS S3, and real-time push notifications.
+     * **Founding Engineer / Fractional Tech Partner:** Helping non-technical founders and early-stage startups navigate architectural decisions and launch MVPs.
+  3. **Case Studies (Outcomes & Business Impact vs Just Code):**
+     * **Dr Plus Home Healthcare (Dubai):** Architected and launched full mobile telehealth ecosystem on iOS & Android in under 3 months; handles patient bookings, doctor GPS tracking, and payment processing.
+     * **Finovision & Duotek:** Production fintech and enterprise web platforms.
+     * **dirham_symbol:** 160/160 pub points open-source currency engine powering Flutter apps across the UAE.
+  4. **Interactive "Start a Project" Contact Experience:**
+     * Clean interactive inquiry where clients can select what they need: Mobile App, Full-Stack Web, Backend/API, or Consultation.
+     * Instant direct connection via WhatsApp (+91 9207874848) and Email (nadeerep.dev@gmail.com).
+  5. **SEO & Structured Data:**
+     * Schema.org `Person` combined with `ProfessionalService` (Nadeer E P as an independent Software Consultant & Mobile App Specialist in Kerala & Dubai).
 

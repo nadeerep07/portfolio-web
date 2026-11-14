@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Nadeer E P",
   },
   description:
-    "Nadeer E P | Founding Engineer, Flutter & Full-Stack Developer in Kerala & Dubai. Built Dr Plus on iOS/Android and dirham_symbol on pub.dev (160/160 pts).",
+    "Nadeer E P | Independent Flutter & Full-Stack Developer based in Kerala & Dubai. Partnering with founders & businesses to build and launch production mobile apps and scalable web platforms.",
   keywords: [
     "Nadeer E P",
     "Nadeer EP",
@@ -34,6 +34,10 @@ export const metadata: Metadata = {
     "Flutter Developer Kerala",
     "Flutter Developer Kozhikode",
     "Flutter Developer India",
+    "Hire Flutter Developer Kerala",
+    "Freelance Flutter Developer Dubai",
+    "Flutter MVP Development",
+    "Flutter Consultant Kerala",
     "Full-Stack Developer",
     "Founding Engineer",
     "Remote Flutter Developer",
@@ -290,6 +294,55 @@ const jsonLd = {
         "@id": `${siteUrl}/#person`,
       },
       inLanguage: "en",
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${siteUrl}/#service`,
+      name: "Nadeer E P — Flutter & Full-Stack Engineering Services",
+      description:
+        "Independent software engineering consultancy specializing in turnkey Flutter mobile app development, Next.js web applications, and backend systems for startups and businesses.",
+      url: siteUrl,
+      provider: {
+        "@id": `${siteUrl}/#person`,
+      },
+      areaServed: ["India", "United Arab Emirates", "Worldwide"],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Kozhikode",
+        addressRegion: "Kerala",
+        postalCode: "673001",
+        addressCountry: "IN",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Engineering Solutions",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Turnkey Mobile App Development (iOS & Android)",
+              description: "End-to-end Flutter engineering taking products from idea to App Store and Google Play launch.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Full-Stack Web & SaaS Platforms",
+              description: "Production Next.js, Node.js, and PostgreSQL web platforms built for speed and scale.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Backend APIs & Payment Gateway Integration",
+              description: "REST APIs with UAE and India payment gateway integrations (Urban Ledger, Tap, Razorpay).",
+            },
+          },
+        ],
+      },
     },
     {
       "@type": "ProfilePage",

@@ -111,26 +111,26 @@ function MiniIcon({
 
 const services = [
   [
-    "Mobile Engineering",
-    "Flutter applications for iOS and Android with clean architecture, robust state management, and end-to-end production store deployment.",
+    "Turnkey Mobile Apps",
+    "End-to-end Flutter engineering for iOS & Android. Taking your product from Figma design to live Google Play & Apple App Store releases in 30–60 days.",
     "▣",
     "violet",
   ],
   [
-    "Full-Stack Web",
-    "High-performance Next.js and React experiences backed by reliable REST APIs, responsive interfaces, and multilingual workflows.",
+    "Full-Stack Web & SaaS",
+    "High-speed, SEO-optimized Next.js and React web applications backed by scalable PostgreSQL & MongoDB architectures and fluid UX.",
     "⌘",
     "blue",
   ],
   [
-    "Backend & APIs",
-    "Node.js, Express, and Fastify REST APIs with PostgreSQL, MongoDB, JWT authentication, and fine-grained role-based access control.",
+    "Backend & Payment Systems",
+    "Production Node.js & Fastify REST APIs with seamless UAE (Urban Ledger, Tap) & India (Razorpay) payment gateways, JWT security, and RBAC.",
     "⌁",
     "amber",
   ],
   [
-    "Cloud & DevOps",
-    "AWS S3, Firebase Cloud Messaging, GitHub Actions CI/CD, payment gateway migrations, unit testing, and store release maintenance.",
+    "Cloud, DevOps & Releases",
+    "AWS S3 file management, Firebase Cloud Messaging, GitHub Actions CI/CD automation, and dedicated Google Play & App Store release maintenance.",
     "↗",
     "cyan",
   ],
@@ -165,7 +165,7 @@ const projects = [
     title: "Dr Plus Home Healthcare",
     type: "Consumer Healthcare Platform",
     description:
-      "Patient-facing healthcare app in Dubai for doctor home visits, nurse bookings, lab test reports via AWS S3, and payment gateways.",
+      "Delivered a complete telehealth ecosystem on iOS & Android in under 3 months for a Dubai healthcare provider, powering patient bookings, doctor GPS tracking, and payment processing.",
     image: "/images/dr-plus-home-healthcare.png",
     href: "https://apps.apple.com/in/app/dr-plus-home-healthcare/id6757393421",
     playStoreHref: "https://play.google.com/store/apps/details?id=com.drplus.homecare.user",
@@ -177,7 +177,7 @@ const projects = [
     title: "Dr Plus Team",
     type: "Healthcare Staff App",
     description:
-      "Production Flutter staff app with Node.js APIs, biometric attendance, GPS clock-in, and release ownership across both app stores.",
+      "Turnkey workforce mobile app on both app stores with biometric attendance sync, automated GPS clock-in/out, and backend payroll mapping.",
     image: "/images/dr-plus-team-preview.png",
     href: "https://apps.apple.com/in/app/dr-plus-team/id6827041110",
     playStoreHref: "https://play.google.com/store/apps/details?id=com.drplus.staff",
@@ -200,7 +200,7 @@ const projects = [
     title: "InvoZoyo",
     type: "Offline Billing & Inventory",
     description:
-      "Offline-first Flutter POS with Hive DB, PDF invoice generation, cart discounts, and real-time low-stock alerts.",
+      "Offline-first POS application with Hive DB, PDF invoice generation, cart discounts, and low-stock inventory alerts.",
     image: "/images/invo-zoyo.png",
     href: "https://play.google.com/store/apps/details?id=com.zoyo.bathware",
     playStoreHref: "https://play.google.com/store/apps/details?id=com.zoyo.bathware",
@@ -211,7 +211,7 @@ const projects = [
     title: "Finovision",
     type: "Fintech Platform",
     description:
-      "A polished financial web product showcasing fintech solutions with clean responsive layout and fluid interactions.",
+      "Fintech corporate platform engineered for a modern financial client, featuring responsive design, interactive financial tools, and high-speed delivery.",
     image: "/images/finovision-preview.png",
     href: "https://www.finovision.net/",
     badge: "Live Web",
@@ -221,7 +221,7 @@ const projects = [
     title: "Duotek",
     type: "Corporate Platform",
     description:
-      "Dubai-based technology platform engineered to present enterprise digital services with high speed and modern aesthetics.",
+      "Dubai-based enterprise technology platform engineered with high performance, sleek branding, and global cloud deployment.",
     image: "/images/duotek-preview.png",
     href: "https://duotek.ae/",
     badge: "Live Web",
@@ -257,8 +257,16 @@ const processSteps = [
   ["05", "Store Release", "Deploy and actively maintain releases across Apple App Store, Google Play Store, and pub.dev."],
 ];
 
+const serviceInquiryOptions = [
+  { id: "Turnkey Mobile App", label: "📱 Mobile App (iOS & Android)" },
+  { id: "Full-Stack Web & SaaS", label: "💻 Full-Stack Web / SaaS" },
+  { id: "Backend & Payment APIs", label: "⚙️ Backend & Payment APIs" },
+  { id: "Technical Consultation", label: "💡 Technical Consultation" },
+];
+
 export function PortfolioSections() {
   const [selectedCert, setSelectedCert] = React.useState<typeof certificates[0] | null>(null);
+  const [selectedService, setSelectedService] = React.useState<string>("Turnkey Mobile App");
 
   return (
     <div className="space-y-8 mt-10">
@@ -272,7 +280,7 @@ export function PortfolioSections() {
                 <>
                   Designing with Empathy,
                   <br />
-                  Building with Purpose.
+                  Building for Business Impact.
                 </>
               }
             />
@@ -296,17 +304,36 @@ export function PortfolioSections() {
           </div>
           <div className="space-y-4 text-sm sm:text-base leading-relaxed text-[#475569] dark:text-[#94a3b8]">
             <p>
-              I’m a Flutter and full-stack developer based in Kozhikode, Kerala, specializing in mobile and web applications using Flutter, Node.js, Next.js, and PostgreSQL.
+              I’m an independent Flutter and full-stack developer based in Kozhikode, Kerala. I partner with founders, businesses, and product teams to take ambitious mobile apps and full-stack platforms from concept to production.
             </p>
             <p>
-              As the sole engineer behind a live healthcare platform, I hold end-to-end ownership across mobile client engineering, REST APIs, payment gateways, FCM notifications, cloud storage, and CI/CD pipelines.
+              As the sole founding engineer behind a live Dubai healthcare ecosystem on both app stores, I provide end-to-end technical execution: architectural design, mobile client engineering, REST APIs, payment gateways (Urban Ledger, Tap, Razorpay), cloud infrastructure, and CI/CD releases.
             </p>
-            <div className="pt-2">
+            <div className="pt-2 flex flex-wrap items-center gap-3">
               <Link
-                href="#work"
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const el = document.getElementById("contact");
+                  if (el) {
+                    const navOffset = 84;
+                    const offsetPosition = el.getBoundingClientRect().top + window.scrollY - navOffset;
+                    window.scrollTo({
+                      top: Math.max(0, offsetPosition),
+                      behavior: "smooth",
+                    });
+                    window.history.pushState(null, "", "#contact");
+                  }
+                }}
                 className="inline-flex items-center gap-2 rounded-full bg-[#0f172a] px-6 py-3 text-xs font-semibold text-white shadow-md hover:bg-black transition-all hover:scale-102 dark:bg-white dark:text-[#0f172a]"
               >
-                View My Work <ArrowUpRightIcon size={14} />
+                Discuss Your Project <ArrowUpRightIcon size={14} />
+              </Link>
+              <Link
+                href="#work"
+                className="inline-flex items-center gap-2 rounded-full bg-white/80 dark:bg-slate-800 border border-white dark:border-white/10 px-5 py-3 text-xs font-semibold text-[#0f172a] dark:text-white shadow-xs hover:bg-white transition-all hover:scale-102"
+              >
+                View Selected Work
               </Link>
             </div>
           </div>
@@ -795,43 +822,96 @@ export function PortfolioSections() {
 
       {/* 8. CONTACT & CONNECT (Liquid Glass Container) */}
       <section id="contact" className="liquid-glass-container p-6 sm:p-10 lg:p-12 scroll-mt-24">
-        <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] items-center">
+        <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] items-center">
           <div>
             <SectionHeading
-              eyebrow="LET'S CONNECT"
+              eyebrow="START A PROJECT"
               title={
                 <>
                   Have a project in mind?
                   <br />
-                  Let’s build something amazing.
+                  Let’s build it together.
                 </>
               }
-              copy="I'm open to full-time engineering roles, founding contracts, and high-impact mobile/web products."
+              copy="I partner with founders and businesses as an independent technical partner for mobile apps, SaaS products, and custom engineering."
             />
-            <div className="space-y-3.5 text-sm text-[#0f172a] dark:text-slate-200">
+
+            {/* Interactive Project Inquiry Selector */}
+            <div className="p-4 sm:p-5 rounded-2xl liquid-glass-card space-y-3.5 mb-5 border border-white/80 dark:border-white/10">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#6366f1] dark:text-[#a5b4fc]">
+                  I Need Help With:
+                </span>
+                <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400">
+                  Select a service below
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {serviceInquiryOptions.map((opt) => {
+                  const isSelected = selectedService === opt.id;
+                  return (
+                    <button
+                      key={opt.id}
+                      type="button"
+                      onClick={() => setSelectedService(opt.id)}
+                      className={`text-left px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center justify-between border cursor-pointer ${
+                        isSelected
+                          ? "bg-[#0f172a] text-white dark:bg-white dark:text-[#0f172a] border-transparent shadow-xs scale-101"
+                          : "bg-white/60 dark:bg-slate-800/60 text-[#0f172a] dark:text-slate-200 border-white/80 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800"
+                      }`}
+                    >
+                      <span>{opt.label}</span>
+                      {isSelected && <span className="text-xs font-bold">✓</span>}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Instant Action CTAs */}
+              <div className="pt-2 flex flex-col sm:flex-row gap-2.5">
+                <a
+                  href={`https://wa.me/919207874848?text=${encodeURIComponent(`Hi Nadeer, I would like to discuss a project regarding: ${selectedService}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-all hover:scale-101"
+                >
+                  <PhoneIcon size={14} /> Start on WhatsApp
+                </a>
+                <a
+                  href={`mailto:nadeerep.dev@gmail.com?subject=${encodeURIComponent(`Project Inquiry: ${selectedService}`)}&body=${encodeURIComponent(`Hi Nadeer,\n\nI would like to discuss a project with you regarding: ${selectedService}.\n\nProject Overview & Scope:\n`)}`}
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-bold bg-[#0f172a] text-white dark:bg-white dark:text-[#0f172a] hover:bg-black dark:hover:bg-slate-100 shadow-sm transition-all hover:scale-101"
+                >
+                  <MailIcon size={14} /> Send Project Email
+                </a>
+              </div>
+            </div>
+
+            {/* Direct Contact Channels */}
+            <div className="space-y-2.5 text-sm text-[#0f172a] dark:text-slate-200">
               <a
-                className="flex items-center gap-3.5 p-3.5 rounded-2xl liquid-glass-card hover:text-[#6366f1] transition-colors"
+                className="flex items-center gap-3.5 p-3 rounded-2xl liquid-glass-card hover:text-[#6366f1] transition-colors"
                 href="mailto:nadeerep.dev@gmail.com"
               >
-                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-50 dark:bg-indigo-950/40 text-[#6366f1] dark:text-[#a5b4fc] shadow-xs shrink-0">
-                  <MailIcon size={18} />
+                <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-50 dark:bg-indigo-950/40 text-[#6366f1] dark:text-[#a5b4fc] shadow-xs shrink-0">
+                  <MailIcon size={16} />
                 </span>
                 <span className="font-medium text-xs sm:text-sm">nadeerep.dev@gmail.com</span>
               </a>
               <a
-                className="flex items-center gap-3.5 p-3.5 rounded-2xl liquid-glass-card hover:text-[#6366f1] transition-colors"
+                className="flex items-center gap-3.5 p-3 rounded-2xl liquid-glass-card hover:text-[#6366f1] transition-colors"
                 href="tel:+919207874848"
               >
-                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 shadow-xs shrink-0">
-                  <PhoneIcon size={18} />
+                <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 shadow-xs shrink-0">
+                  <PhoneIcon size={16} />
                 </span>
-                <span className="font-medium text-xs sm:text-sm">+91 9207874848 (WhatsApp / Call)</span>
+                <span className="font-medium text-xs sm:text-sm">+91 9207874848 (WhatsApp / Direct Call)</span>
               </a>
-              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl liquid-glass-card">
-                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-violet-50 dark:bg-violet-950/40 text-[#6366f1] dark:text-[#a5b4fc] shadow-xs shrink-0">
-                  <MapPinIcon size={18} />
+              <div className="flex items-center gap-3.5 p-3 rounded-2xl liquid-glass-card">
+                <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-violet-50 dark:bg-violet-950/40 text-[#6366f1] dark:text-[#a5b4fc] shadow-xs shrink-0">
+                  <MapPinIcon size={16} />
                 </span>
-                <span className="font-medium text-xs sm:text-sm">Kozhikode, Kerala · Open to relocation &amp; remote</span>
+                <span className="font-medium text-xs sm:text-sm">Kozhikode, Kerala · Available for UAE &amp; Global Projects</span>
               </div>
             </div>
           </div>

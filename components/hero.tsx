@@ -21,6 +21,21 @@ export function Hero() {
     }
   };
 
+  const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const contactEl = document.getElementById("contact");
+    if (contactEl) {
+      const navOffset = 84;
+      const elementPosition = contactEl.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - navOffset;
+      window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior: "smooth",
+      });
+      window.history.pushState(null, "", "#contact");
+    }
+  };
+
   return (
     <section
       id="home"
@@ -52,26 +67,40 @@ export function Hero() {
 
           {/* Description */}
           <p className="text-[15px] sm:text-base text-[#475569] dark:text-[#94a3b8] leading-relaxed max-w-md mb-8 font-normal">
-            Flutter developer based in Kozhikode, Kerala, and sole engineer behind Dr Plus (production healthcare platform live on Google Play &amp; App Store). Building high-performance mobile apps, robust APIs, and modern full-stack web applications.
+            I partner with founders, businesses, and product teams to architect and launch production-grade mobile applications and full-stack web platforms. From initial design to Google Play &amp; Apple App Store releases.
           </p>
 
           {/* Primary Action Buttons (Solid black pill + white frosted pill) */}
-          <div className="flex flex-wrap items-center gap-4 mb-10">
-            <Link
-              href="#work"
-              onClick={handleScrollToWork}
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs font-semibold bg-[#0f172a] text-white dark:bg-white dark:text-[#0f172a] hover:bg-black dark:hover:bg-slate-100 shadow-md hover:shadow-lg transition-all hover:scale-102"
-            >
-              View My Work <ArrowUpRightIcon size={14} />
-            </Link>
+          <div className="flex flex-col gap-3.5 mb-10 w-full max-w-md">
+            <div className="flex flex-wrap items-center gap-3.5">
+              <Link
+                href="#contact"
+                onClick={handleScrollToContact}
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs font-semibold bg-[#0f172a] text-white dark:bg-white dark:text-[#0f172a] hover:bg-black dark:hover:bg-slate-100 shadow-md hover:shadow-lg transition-all hover:scale-102"
+              >
+                Discuss Your Project <ArrowUpRightIcon size={14} />
+              </Link>
 
-            <a
-              href="/Nadeer_EP_Flutter_Developer_Resume.pdf"
-              download="Nadeer_EP_Flutter_Developer_Resume.pdf"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs font-semibold bg-white/85 dark:bg-slate-800/85 border border-white dark:border-white/10 text-[#0f172a] dark:text-white hover:bg-white dark:hover:bg-slate-700 shadow-xs hover:shadow-md transition-all hover:scale-102"
-            >
-              Download CV <DownloadIcon size={14} />
-            </a>
+              <Link
+                href="#work"
+                onClick={handleScrollToWork}
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs font-semibold bg-white/85 dark:bg-slate-800/85 border border-white dark:border-white/10 text-[#0f172a] dark:text-white hover:bg-white dark:hover:bg-slate-700 shadow-xs hover:shadow-md transition-all hover:scale-102"
+              >
+                View Selected Work <ArrowUpRightIcon size={14} />
+              </Link>
+            </div>
+
+            {/* Subtle recruiter resume link */}
+            <p className="text-[11px] text-slate-500 dark:text-slate-400 pl-1">
+              Looking for my full-time engineering resume?{" "}
+              <a
+                href="/Nadeer_EP_Flutter_Developer_Resume.pdf"
+                download="Nadeer_EP_Flutter_Developer_Resume.pdf"
+                className="underline underline-offset-2 font-medium text-[#6366f1] dark:text-[#a5b4fc] hover:text-black dark:hover:text-white transition-colors"
+              >
+                Download CV
+              </a>
+            </p>
           </div>
 
           {/* Deployment destinations */}

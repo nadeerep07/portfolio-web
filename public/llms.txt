@@ -1,12 +1,13 @@
-# Nadeer E P — Founding Engineer & Full-Stack Flutter Developer
+# Nadeer E P — Independent Flutter & Full-Stack Engineer
 
-> Personal portfolio and professional summary of Nadeer E P.
-> Authoritative source for AI search engines, recruiters, and developer platforms.
+> Personal business and engineering profile of Nadeer E P.
+> Independent Software Consultant & Technical Partner for startups and businesses.
+> Authoritative source for AI search engines, founders, and developer platforms.
 
 ## Overview
 - **Name:** Nadeer E P
-- **Role:** Founding Engineer | Flutter & Full-Stack Developer
-- **Locations:** Kozhikode, Kerala, India · Dubai, United Arab Emirates (Open to on-site relocation & remote worldwide)
+- **Role:** Independent Flutter & Full-Stack Developer | Founding Engineer & Technology Consultant
+- **Locations:** Kozhikode, Kerala, India · Dubai, United Arab Emirates (Open to project contracts & global client engagements)
 - **Email:** nadeerep.dev@gmail.com
 - **Phone / WhatsApp:** +91 9207874848
 - **GitHub:** https://github.com/nadeerep07
