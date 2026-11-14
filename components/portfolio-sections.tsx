@@ -304,36 +304,17 @@ export function PortfolioSections() {
           </div>
           <div className="space-y-4 text-sm sm:text-base leading-relaxed text-[#475569] dark:text-[#94a3b8]">
             <p>
-              I’m an independent Flutter and full-stack developer based in Kozhikode, Kerala. I partner with founders, businesses, and product teams to take ambitious mobile apps and full-stack platforms from concept to production.
+              Based in Kozhikode, Kerala, I specialize in engineering robust mobile and web applications with Flutter, Node.js, Next.js, and PostgreSQL. I bridge the gap between clean UI design and battle-tested systems architecture, writing maintainable code that scales smoothly.
             </p>
             <p>
-              As the sole founding engineer behind a live Dubai healthcare ecosystem on both app stores, I provide end-to-end technical execution: architectural design, mobile client engineering, REST APIs, payment gateways (Urban Ledger, Tap, Razorpay), cloud infrastructure, and CI/CD releases.
+              Having served as the sole founding engineer behind a production Dubai healthcare platform on iOS and Android, I handle the complete product lifecycle—from REST API design, database schemas, and payment integrations (Urban Ledger, Tap, Razorpay) to cloud storage, FCM push notifications, and store releases.
             </p>
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <Link
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const el = document.getElementById("contact");
-                  if (el) {
-                    const navOffset = 84;
-                    const offsetPosition = el.getBoundingClientRect().top + window.scrollY - navOffset;
-                    window.scrollTo({
-                      top: Math.max(0, offsetPosition),
-                      behavior: "smooth",
-                    });
-                    window.history.pushState(null, "", "#contact");
-                  }
-                }}
+                href="#services"
                 className="inline-flex items-center gap-2 rounded-full bg-[#0f172a] px-6 py-3 text-xs font-semibold text-white shadow-md hover:bg-black transition-all hover:scale-102 dark:bg-white dark:text-[#0f172a]"
               >
-                Discuss Your Project <ArrowUpRightIcon size={14} />
-              </Link>
-              <Link
-                href="#work"
-                className="inline-flex items-center gap-2 rounded-full bg-white/80 dark:bg-slate-800 border border-white dark:border-white/10 px-5 py-3 text-xs font-semibold text-[#0f172a] dark:text-white shadow-xs hover:bg-white transition-all hover:scale-102"
-              >
-                View Selected Work
+                Explore Services &amp; Domains <ArrowUpRightIcon size={14} />
               </Link>
             </div>
           </div>
