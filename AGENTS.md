@@ -180,6 +180,7 @@ All stored in `./images/`:
   * Injected via `app/layout.tsx` with full `@graph` containing `Person` (with postal address, geo coordinates, work locations, contact point), `WebSite`, `ProfilePage`, `BreadcrumbList`, and `SoftwareApplication` entries.
 * **Geographic Targeting:**
   * Meta tags for regional recruiter discovery: `geo.region` (`IN-KL, AE-DU`), `geo.placename` (`Kozhikode, Kerala, India; Dubai, United Arab Emirates`), `geo.position` (`11.2588;75.7804`), `ICBM` (`11.2588, 75.7804`), `target-country` (`IN, AE, US, GB, CA`), `coverage` (`Worldwide`).
-* **Web App Manifest (`app/manifest.ts`):**
+* **Web App Manifest & Google Favicon Compliance:**
   * Native web app manifest for installability, PWA readiness, and mobile search discoverability.
+  * Google Favicon Search compliance: Multi-size icons in exact multiples of 48px (`icon-48.png`, `icon-96.png`, `icon-192.png`) and multi-layer `favicon.ico` (16px, 32px, 48px), crawled via `Googlebot-Image` and `Google Favicon`.
 
