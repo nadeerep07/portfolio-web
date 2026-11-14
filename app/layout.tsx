@@ -16,7 +16,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Nadeer E P | Flutter & Full-Stack Developer",
+    default: "Nadeer E P | Flutter & Full-Stack Developer — Kerala & Dubai",
     template: "%s | Nadeer E P",
   },
   description:
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Nadeer E P | Flutter & Full-Stack Developer",
+    title: "Nadeer E P | Flutter & Full-Stack Developer — Kerala & Dubai",
     description:
       "Production-grade mobile and full-stack applications. Sole engineer behind Dr Plus (Dubai Healthcare on iOS & Android) and author of dirham_symbol on pub.dev (160/160 pts).",
     url: siteUrl,
@@ -108,9 +108,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nadeer E P | Flutter & Full-Stack Developer",
+    title: "Nadeer E P | Flutter & Full-Stack Developer — Kerala & Dubai",
     description:
-      "Founding Engineer & Full-Stack Flutter Developer. Sole engineer behind Dr Plus and creator of dirham_symbol on pub.dev.",
+      "Founding Engineer & Full-Stack Flutter Developer based in Kerala & Dubai. Sole engineer behind Dr Plus and creator of dirham_symbol on pub.dev.",
     images: ["/icon.png"],
   },
   other: {
